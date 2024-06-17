@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .B{
+            height:500px;
+            width:280px;
+            margin-left:400px;
+            border: solid;
+            background-color: rgb(66, 137, 179);    
+            padding-left:80px;
+        }
+        .B input{
+            display: block;
+            margin-bottom:20px;
+        }
+        .C button{
+            margin-left:50px;
+        }
+        .D table{
+            width:100%;
+            margin-top:50px;
+            background-color: rgb(199, 193, 193);
+            padding: 20px;
+            border-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="A">
+    <div class="B">
+        EmployeeId <input type="text" placeholder="Employee ID" class="input-field">
+        EmlopyeeName  <input type="text" placeholder="Employee Name" class="input-field">
+        position:<input type="text" placeholder="Position" class="input-field">
+
+        <div class="C">
+       <button onclick="addHtmlTableRow();">add Leave</button>
+    </div>
+    </div>
+    <div class="D">
+        <table id="table" border="1">
+            <tr>
+                <th>employee id </th>
+                <th>employee name</th>
+                <th>position</th>
+               
+            </tr>
+        </table>
+    </div>
+  </div> 
+
+  <script>
+
+    // add Row
+
+    function addHtmlTableRow()
+    {
+        // get the table by id
+        // create a new row and cells
+        // get value from input text
+        // get the values into row cell's
+        var table = document.getElementById("table"),
+            newRow = table.insertRow(table.length),
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2),
+            
+            employeeid = document.getElementById("employeeid").value,
+            emlopyeename = document.getElementById("emplopyeename").value,
+            position= document.getElementById("position").value;
+           
+        cell1.innerHTML = employeeId,
+        cell2.innerHTML = emlopyeeName,  
+        cell3.innerHTML = position;   
+       
+    } 
+  </script>
+</body>
+</html> 
